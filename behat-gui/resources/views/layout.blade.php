@@ -45,7 +45,7 @@
                 <a class="navbar-brand" href="{{ route('tests.index') }}">Behat</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
-                @if(Auth::check())
+
                 <ul class="nav navbar-nav">
                     <li><a href="{{ route('tests.index')  }}">Home</a></li>
                     <li><a href="{{ route('reports.index') }}">Report</a></li>
@@ -72,15 +72,7 @@
                     <li><a href="{{ route('categories.index')  }}">Categories</a></li>
                     <li><a href="{{ route('feature_contexts.index')  }}">Feature Context</a></li>
                 </ul>
-                <ul class="nav navbar-nav pull-right">
-                    <li><a href="{{ url('/logout') }}">Logout</a></li>
-                </ul>
-                @endif
-                @if(!Auth::check())
-                <ul class="nav navbar-nav pull-right">
-                    <li><a href="{{ url('/login') }}">Login</a></li>
-                </ul>
-                @endif
+                
             </div><!--/.nav-collapse -->
         </div>
     </nav>
